@@ -1,0 +1,62 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pic"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="edu.oleg088097.arkanoid.menu.MainMenuActivity">
+
+
+    <TextView
+        android:id="@+id/gratitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/grats"
+        android:textAlignment="center"
+        android:textColor="@color/text_blue"
+        android:textSize="24sp"
+        autofit:layout_constraintBottom_toBottomOf="parent"
+        autofit:layout_constraintLeft_toLeftOf="parent"
+        autofit:layout_constraintRight_toRightOf="parent"
+        autofit:layout_constraintTop_toBottomOf="@+id/autofitLayout"
+        autofit:layout_constraintVertical_bias="0.757"
+        autofit:layout_constraintHorizontal_bias="0.54" />
+
+    <me.grantland.widget.AutofitLayout
+        android:id="@+id/autofitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        autofit:layout_constraintHorizontal_bias="0.0"
+        autofit:layout_constraintLeft_toLeftOf="parent"
+        autofit:layout_constraintRight_toRightOf="parent"
+        autofit:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/helpTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:maxLines="15"
+            android:textColor="@color/text_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </me.grantland.widget.AutofitLayout>
+
+</android.support.constraint.ConstraintLayout>

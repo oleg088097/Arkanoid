@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Arkanoid</string>
+    <string name="new_game">New Game</string>
+    <string name="help">Help</string>
+    <string name="exit">Exit</string>
+    <string name="resume">Resume</string>
+    <string name="classic">Classic</string>
+    <string name="fast">Fast</string>
+    <string name="aggressive">Aggressive</string>
+    <string name="lives">Lives %d</string>
+    <string name="level">Level %d</string>
+    <string name="turnOff">Music Off</string>
+    <string name="turnOn">Music On</string>
+    <string name="tuneMusic">Tune Music</string>
+    <string name="grats">And for the best part of the design of this game my deepest gratitude to Skyimp</string>
+</resources>
