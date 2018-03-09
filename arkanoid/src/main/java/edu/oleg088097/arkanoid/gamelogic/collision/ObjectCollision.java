@@ -101,19 +101,18 @@ class ObjectCollision {
     }
 
     static CollisionPoint ballBricksCollision(Ball ball, Brick brick, boolean isFire) {
+        CollisionPoint intersectResult = isIntersect(ball, brick.getRect());
+        if (intersectResult == null) {
+            return null;
+        }
 
-            CollisionPoint intersectResult = isIntersect(ball, brick.getRect());
-            if (intersectResult == null) {
-                return null;
-            }
+        brick.hit();
 
-            brick.hit();
+        if (isFire && brick.isDestroyed()) {
+            return null;
+        }
 
-            if (isFire && brick.isDestroyed()) {
-                return null;
-            }
-
-            return intersectResult;
+        return intersectResult;
     }
 
 

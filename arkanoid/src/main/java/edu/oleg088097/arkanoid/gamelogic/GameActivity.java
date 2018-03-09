@@ -138,7 +138,7 @@ public class GameActivity extends AppCompatActivity {
 
         @Override
         public void surfaceCreated(SurfaceHolder holder) {
-            gameCollision = new GameCollision(BOTTOM_EDGE, brickWidth, bricksOffsetX, brickHeight, bricksOffsetY, bonusSpeed);
+            gameCollision = new GameCollision(BOTTOM_EDGE, brickWidth, bricksOffsetX, brickHeight, bricksOffsetY);
 
             gameCycle = new GameCycle(gameView, sHolder);
             gameCycle.start();

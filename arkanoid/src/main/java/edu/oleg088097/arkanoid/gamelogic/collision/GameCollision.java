@@ -26,16 +26,14 @@ public class GameCollision {
     private final float bricksOffsetX;
     private final float brickHeight;
     private final float bricksOffsetY;
-    private final float bonusSpeed;
     private RectF bonusPlace;
 
-    public GameCollision(int edge, float width, float offX, float height, float offY, float speed) {
+    public GameCollision(int edge, float width, float offX, float height, float offY) {
         BOTTOM_EDGE = edge;
         brickWidth = width;
         bricksOffsetX = offX;
         brickHeight = height;
         bricksOffsetY = offY;
-        bonusSpeed = speed;
     }
 
     public IntersectionResult checkIntersection(ArrayList<Brick> bricks, ArrayList<Ball> balls, Paddle paddle, Bonus currentBonus, boolean isFire, int activeBonusTime) {
