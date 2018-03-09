@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import java.util.Locale;
@@ -13,12 +12,6 @@ import edu.oleg088097.arkanoid.R;
 import edu.oleg088097.arkanoid.util.MusicService;
 
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener{
-    public enum GameType
-    {
-        CLASSIC,
-        FAST,
-        AGGRESSIVE
-    }
 
     @Override
     public void onClick(View v) {
@@ -40,7 +33,6 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
             }
             case R.id.settingsButton:{
-                Log.d("MyTag", "Set");
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
             }

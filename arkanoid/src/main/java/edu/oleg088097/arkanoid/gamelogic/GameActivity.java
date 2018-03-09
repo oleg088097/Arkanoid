@@ -1,3 +1,4 @@
+
 package edu.oleg088097.arkanoid.gamelogic;
 
 import android.content.Context;
@@ -23,7 +24,7 @@ import edu.oleg088097.arkanoid.gameobjects.Ball;
 import edu.oleg088097.arkanoid.gameobjects.Bonus;
 import edu.oleg088097.arkanoid.gameobjects.Brick;
 import edu.oleg088097.arkanoid.gameobjects.Paddle;
-import edu.oleg088097.arkanoid.menu.MainMenuActivity;
+import edu.oleg088097.arkanoid.menu.GameTypeMenuActivity;
 import edu.oleg088097.arkanoid.menu.PauseMenuActivity;
 import edu.oleg088097.arkanoid.util.Utils;
 
@@ -66,7 +67,7 @@ public class GameActivity extends AppCompatActivity {
                 String.format(Locale.US, "fonts/%s", "angled_mont.ttf"));
 
         gameView = new GameView(getApplicationContext(),
-                (MainMenuActivity.GameType)getIntent().getExtras().get("gameType"));
+                (GameTypeMenuActivity.GameType)getIntent().getExtras().get("gameType"));
         gameView.setLayoutParams(new ConstraintLayout.LayoutParams(
                 ConstraintLayout.LayoutParams.MATCH_PARENT,
                 ConstraintLayout.LayoutParams.MATCH_PARENT));
@@ -100,10 +101,10 @@ public class GameActivity extends AppCompatActivity {
         Bonus currentBonus;
         Bonus.BonusType activeBonusType;
         Integer activeBonusTime;
-        final MainMenuActivity.GameType gameType;
+        final GameTypeMenuActivity.GameType gameType;
         GameCollision gameCollision;
 
-        GameView(Context context, MainMenuActivity.GameType gType ) {
+        GameView(Context context, GameTypeMenuActivity.GameType gType ) {
             super(context);
             sHolder = getHolder();
             sHolder.addCallback(this);
@@ -368,7 +369,7 @@ public class GameActivity extends AppCompatActivity {
                 difficulty--;
             }
 
-            if (gameType == MainMenuActivity.GameType.AGGRESSIVE) {
+            if (gameType == GameTypeMenuActivity.GameType.AGGRESSIVE) {
                 Bonus.divideBonus(balls);
                 Bonus.divideBonus(balls);
             }
