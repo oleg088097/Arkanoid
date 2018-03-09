@@ -12,7 +12,6 @@ import edu.oleg088097.arkanoid.R;
 import edu.oleg088097.arkanoid.util.MusicService;
 
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener{
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -65,6 +64,3 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         startService(music);
     }
 }
-
-
-            /*C:\Users\Олег\AppData\Local\Android\sdk\platform-tools\adb connect 192.168.0.14:5555*/

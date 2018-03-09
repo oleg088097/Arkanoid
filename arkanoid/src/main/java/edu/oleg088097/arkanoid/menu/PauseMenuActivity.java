@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import java.util.Locale;
@@ -27,13 +26,11 @@ public class PauseMenuActivity extends AppCompatActivity implements View.OnClick
                 break;
             }
             case edu.oleg088097.arkanoid.R.id.exitButton:{
-                Log.d("MyTag", "Exit");
                 getBaseContext().stopService(new Intent(getBaseContext(),
                         MusicService.class));
                 finishAffinity();
             }
             case R.id.settingsButton:{
-                Log.d("MyTag", "Set");
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
             }
