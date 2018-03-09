@@ -23,7 +23,7 @@ class ObjectCollision {
         BOTRIGHT,
     }
 
-    static CollisionPoint isIntersect(final Ball ball, final RectF rect) {
+    static CollisionPoint isIntersect(Ball ball, RectF rect) {
         float ballRadius = ball.getRadius();
 
         if (pow(rect.left - ball.getX(), 2) + pow(rect.bottom - ball.getY(), 2) <= pow(ballRadius, 2)) {
@@ -116,7 +116,7 @@ class ObjectCollision {
     }
 
 
-    private static int containsYPoints(final Ball ball, final RectF rect, Utils.ArithmeticInterface arithmetic) {
+    private static int containsYPoints(Ball ball, RectF rect, Utils.ArithmeticInterface arithmetic) {
         float COS_PI_3 = (float) Math.cos(Math.PI / 3);
         float SIN_PI_3 = (float) Math.sin(Math.PI / 3);
         float ballRadius = ball.getRadius();
@@ -133,7 +133,7 @@ class ObjectCollision {
         return ret;
     }
 
-    private static int containsXPoints(final Ball ball, final RectF rect, Utils.ArithmeticInterface arithmetic) {
+    private static int containsXPoints(Ball ball, RectF rect, Utils.ArithmeticInterface arithmetic) {
         float COS_PI_6 = (float) Math.cos(Math.PI / 6);
         float SIN_PI_6 = (float) Math.sin(Math.PI / 6);
         float ballRadius = ball.getRadius();
