@@ -149,4 +149,66 @@ class ObjectCollision {
         }
         return ret;
     }
+
+    static void affectBall(Ball ball, ObjectCollision.CollisionPoint intersectResult) {
+        if (intersectResult == null) {
+            return;
+        }
+
+        switch (intersectResult) {
+            case BOT: {
+                ball.positiveSin();
+                break;
+            }
+            case TOP: {
+                ball.negativeSin();
+                break;
+            }
+            case LEFT: {
+                ball.negativeCos();
+                break;
+            }
+            case RIGHT: {
+                ball.positiveCos();
+                break;
+            }
+            case BOTRIGHT: {
+                if (ball.getSin() < 0) {
+                    ball.positiveSin();
+                }
+                if (ball.getCos() < 0) {
+                    ball.positiveCos();
+                }
+                break;
+            }
+            case TOPRIGHT: {
+                if (ball.getSin() > 0) {
+                    ball.negativeCos();
+                }
+                if (ball.getCos() < 0) {
+                    ball.positiveCos();
+                }
+                break;
+            }
+            case BOTLEFT: {
+                if (ball.getSin() < 0) {
+                    ball.positiveSin();
+                }
+                if (ball.getCos() > 0) {
+                    ball.negativeCos();
+                }
+                break;
+            }
+            case TOPLEFT: {
+                if (ball.getSin() > 0) {
+                    ball.negativeCos();
+                }
+                if (ball.getCos() > 0) {
+                    ball.negativeCos();
+                }
+            }
+            default:
+                break;
+        }
+    }
 }
