@@ -12,7 +12,6 @@ import edu.oleg088097.arkanoid.R;
 import edu.oleg088097.arkanoid.util.MusicService;
 
 public class PauseMenuActivity extends AppCompatActivity implements View.OnClickListener{
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){

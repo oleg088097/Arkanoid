@@ -1,4 +1,3 @@
-
 package edu.oleg088097.arkanoid.gamelogic;
 
 import android.content.Context;
@@ -483,6 +482,3 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 }
-
-
-

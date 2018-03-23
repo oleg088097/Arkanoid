@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.arkanoid", appContext.getPackageName());
+        assertEquals("edu.oleg088097.arkanoid", appContext.getPackageName());
     }
 }

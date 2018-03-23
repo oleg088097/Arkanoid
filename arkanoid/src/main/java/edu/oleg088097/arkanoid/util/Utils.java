@@ -40,14 +40,14 @@ public class Utils {
         float operation(float a, float b);
     }
 
-    static public class Plus implements ArithmeticInterface{
+    static public class Plus implements ArithmeticInterface {
         @Override
         public float operation(float a, float b) {
             return a+b;
         }
     }
 
-    static public class Minus implements ArithmeticInterface{
+    static public class Minus implements ArithmeticInterface {
         @Override
         public float operation(float a, float b) {
             return a-b;

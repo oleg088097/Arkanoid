@@ -57,5 +57,4 @@ public class GameTypeMenuActivity extends AppCompatActivity implements View.OnCl
         aggressiveGameButton.setOnClickListener(this);
         aggressiveGameButton.setTypeface(typeface);
     }
-
 }
