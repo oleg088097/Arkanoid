@@ -4,7 +4,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.SurfaceHolder;
 
 class GameCycle extends Thread {
@@ -27,11 +26,7 @@ class GameCycle extends Thread {
         int loops;
         float interpolation;
 
-        long startTime = SystemClock.elapsedRealtime();
-        long cycleTimes = 0;
-
         while (!interrupted()) {
-            cycleTimes++;
             loops = 0;
             while (SystemClock.elapsedRealtime() > next_game_tick && loops < MAX_FRAMESKIP) {
                 gameView.updateGame();
@@ -56,9 +51,5 @@ class GameCycle extends Thread {
                 }
             }
         }
-
-        long stopTime = SystemClock.elapsedRealtime();
-
-        Log.d("Perf", ""+(stopTime-startTime)/cycleTimes);
     }
 }
